@@ -3,6 +3,7 @@
 Registers test steps from test folder of your application.
 
 Run `zig build test-<filename in test folder>` to run the tests of a specific file.
+
 Run `zig build test` to run all the tests from all files in test directory.
 
 Goto [zensor/build.zig](https://github.com/akhildevelops/zensor/blob/d3abaf1d787b7beff20cc3bd2ad3da8059040803/build.zig#L10-L12) for understanding interaction with zigtest.
