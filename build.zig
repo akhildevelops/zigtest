@@ -32,7 +32,7 @@ fn _import_module(self: Self, root_module: *std.Build.Module) void {
         root_module.addImport(kv.key_ptr.*, kv.value_ptr.*);
     }
 }
-pub fn build(self: *Self) (std.fs.Dir.OpenError || std.mem.Allocator.Error)!void {
+pub fn register(self: *Self) (std.fs.Dir.OpenError || std.mem.Allocator.Error)!void {
     ////////////////////////////////////////////////////////////
     //// Unit Testing
     // Creates a test binary.
