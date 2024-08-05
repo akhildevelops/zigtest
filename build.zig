@@ -60,3 +60,4 @@ pub fn register(self: *Self) (std.fs.Dir.OpenError || std.mem.Allocator.Error)!v
         }
     }
 }
+pub fn build(_: *std.Build) void {}
