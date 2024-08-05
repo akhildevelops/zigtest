@@ -18,7 +18,7 @@ Have the below lines the project's build.zig file, refer to [zensor/build.zig](h
 
 ```zig
 var zigTestBuilder = zigtest.init(b, .{ .target = target, .optimize = optimize });
-try zigTestBuilder.addModule("zensor", zensor_module);
+try zigTestBuilder.addModule(<your_root_module_name>, <your_root_module>);
 try zigTestBuilder.build();
 ```
 
