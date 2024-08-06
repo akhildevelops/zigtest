@@ -9,6 +9,11 @@ package_name: []const u8,
 const Options = struct { package_name: []const u8, test_folder: ?[]const u8 = null, target: std.Build.ResolvedTarget, optimize: std.builtin.OptimizeMode };
 
 const Self = @This();
+
+//User is forced to provide package name to understand if builder context matches to current folder
+//There's a tracking issue to import zon file into zig: https://github.com/ziglang/zig/issues/14531
+//After this feature is implemented then package_name will be removed.
+
 pub fn init(b: *std.Build, test_options: Options) Self {
     var folder: []const u8 = undefined;
     if (test_options.test_folder) |f| {
